@@ -3,6 +3,7 @@ import Card from "./Card";
 import book from "../constant/book";
 import { FaShoppingCart, FaUser } from "react-icons/fa";
 import Circles from "../constant/circles";
+import { Link } from "react-router-dom";
 const BookListPage = () => {
   return (
     <div className=" relative flex items-center justify-center bg-[#ebeaea]">
@@ -14,7 +15,7 @@ const BookListPage = () => {
         <div className="relative flex justify-between items-center mb-4 mx-2">
           <div className="flex flex-row ">
             <button className="flex items-center bg-[#89C9D4] px-6 py-2 font-semibold rounded-3xl">
-              Back
+              <Link to={"/login"}>Back</Link>
             </button>
             <div className="ml-2 flex items-center justify-center rounded-full bg-[#89C9D4] w-10 h-10">
               <FaShoppingCart />
@@ -26,7 +27,7 @@ const BookListPage = () => {
               <FaUser />
             </div>
             <button className="bg-[#89C9D4]  px-6 py-2 rounded-3xl font-semibold">
-              Log Out
+              <Link to={"/login"}> Log Out</Link>
             </button>
           </div>
         </div>

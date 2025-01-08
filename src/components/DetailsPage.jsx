@@ -1,5 +1,5 @@
 import React from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { useBookDetails } from "../context/BookContext";
 import { FaPlusCircle, FaShoppingCart, FaUser } from "react-icons/fa";
 import Circles from "../constant/circles";
@@ -25,7 +25,8 @@ const DetailsPage = () => {
         <div className="relative flex justify-between items-center mb-4 mx-2">
           <div className="flex flex-row ">
             <button className="flex items-center bg-[#89C9D4] px-6 py-2 font-semibold rounded-3xl">
-              Back
+              <Link to={"/book-list"}>Back</Link>
+              
             </button>
             <div className="ml-2 flex items-center justify-center rounded-full bg-[#89C9D4] w-10 h-10">
               <FaShoppingCart />
@@ -37,7 +38,7 @@ const DetailsPage = () => {
               <FaUser />
             </div>
             <button className="bg-[#89C9D4]  px-6 py-2 rounded-3xl font-semibold">
-              Log Out
+              <Link to={"/login"}> Log Out</Link>
             </button>
           </div>
         </div>

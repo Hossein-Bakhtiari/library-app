@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 const Card = ({ book }) => {
   
   return (
-    <div className="flex  bg-white shadow-2xl rounded-xl  overflow-hidden p-3 mb-4">
+    <div className="flex bg-white shadow-2xl rounded-xl  overflow-hidden p-3 mb-4">
       <div className=" flex flex-col w-3/5 ">
         <div className="flex items-center justify-center bg-[#e2e2e2] ">
           <img src={book.image} alt={book.title} className="h-3/4" />
