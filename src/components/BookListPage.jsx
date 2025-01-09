@@ -10,7 +10,7 @@ const BookListPage = () => {
   console.log(state);
 
   return (
-    <div className=" relative flex items-center justify-center bg-[#ebeaea]">
+    <div className=" relative flex  items-center justify-center bg-[#ebeaea]">
       <div className="relative overflow-hidden  w-full h-full bg-[#ffffff] p-4">
         {/* <circles /> */}
         <Circles />

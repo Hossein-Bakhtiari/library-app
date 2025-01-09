@@ -3,10 +3,9 @@ import loginPic from "../assets/undraw_completed_m9ci 1.svg";
 import { Link } from "react-router-dom";
 
 const Login = () => {
-
   return (
     <div className=" relative flex items-center justify-center">
-      <div className="relative overflow-hidden  w-full h-screen p-6 sm:p-8 bg-[#ffffff] rounded-lg ">
+      <div className="relative overflow-hidden   w-full h-full p-5 sm:p-8 bg-[#ffffff] rounded-lg ">
         {/* <circles /> */}
         <div className="sm:hidden absolute top-[-20px] left-[-90px] w-40 h-40 bg-[#52D8F942] rounded-full opacity-90"></div>
         <div className="sm:hidden absolute top-[-80px] left-[-10px] w-40 h-40 bg-[#52D8F942] rounded-full opacity-90"></div>
@@ -73,7 +72,7 @@ const Login = () => {
           </div>
           <div className=" relative text-center mb-4">
             <a
-              href="#"
+              href="/signup"
               className="text-xs font-semibold sm:text-sm text-[#2BB9D2] hover:underline"
             >
               Forgot Password?
@@ -83,20 +82,23 @@ const Login = () => {
             type="submit"
             className="w-full py-3 font-semibold bg-[#2BB9D2] text-white rounded-3xl shadow-xl hover:bg-black focus:outline-none focus:ring-2 focus:ring-black text-sm sm:text-base"
           >
-            <Link to={"/book-List"}>
-            Login
-            </Link>
+            <Link to={"/book-List"}>Login</Link>
           </button>
         </form>
 
         {/* Sign Up */}
-        <div className="text-center mt-4">
-          <p className="text-xs font-medium sm:text-xs">
-            Already have an account?{" "}
-            <a href="#" className="text-[#2BB9D2] hover:underline">
-              Sign Up
-            </a>
-          </p>
+        <div className=" flex justify-center items-center text-center mt-4">
+          <form className="relative">
+            <p className="text-xs font-medium sm:text-xs">
+              Already have an account?{" "}
+              <a
+                href="/signup"
+                className="text-xs font-semibold ml-2 sm:text-sm text-[#2BB9D2] hover:underline"
+              >
+                SignUp
+              </a>
+            </p>
+          </form>
         </div>
       </div>
     </div>

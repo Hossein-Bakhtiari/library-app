@@ -6,6 +6,7 @@ import DetailsPage from "./components/DetailsPage";
 import BookProvider from "./context/BookContext";
 import CartProvider from "./context/CartContext";
 import CheckingOutPage from "./components/CheckingOutPage";
+import SignUp from "./components/SignUp";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Navigate to="/login" />} replace />
           <Route path="/login" element={<Login />} />
+          <Route path="/signup" element={<SignUp />} />
           <Route path="/book-list" element={<BookListPage />} />
           <Route path="/book/:id" element={<DetailsPage />} />
           <Route path="/checkout" element={<CheckingOutPage />} />

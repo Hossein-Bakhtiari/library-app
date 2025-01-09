@@ -7,8 +7,6 @@ const Circles = () => {
                 <div className="sm:hidden absolute top-[-80px] left-[-10px] w-40 h-40 bg-[#52D8F942] rounded-full opacity-90"></div>
                 <div className="sm:hidden absolute top-[240px] left-[-80px] w-80 h-80 bg-[#52D8F942] rounded-full opacity-90"></div>
                 <div className="sm:hidden absolute top-[100px] right-[-90px] w-80 h-80 bg-[#52D8F942] rounded-full opacity-90"></div>
-                <div className="sm:hidden absolute bottom-[-30px] right-[-90px] w-40 h-40 bg-[#52D8F942] rounded-full opacity-90"></div>
-                <div className="sm:hidden absolute bottom-[-90px] right-[-10px] w-40 h-40 bg-[#52D8F942] rounded-full opacity-90"></div>
                 <div className="sm:hidden absolute top-[900px] left-[-80px] w-80 h-80 bg-[#52D8F942] rounded-full opacity-90"></div>
                 <div className="sm:hidden absolute top-[700px] right-[-90px] w-80 h-80 bg-[#52D8F942] rounded-full opacity-90"></div>
                 <div className="sm:hidden absolute top-[1600px] left-[-80px] w-80 h-80 bg-[#52D8F942] rounded-full opacity-90"></div>
