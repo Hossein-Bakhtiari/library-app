@@ -4,7 +4,12 @@ import book from "../constant/book";
 import { FaShoppingCart, FaUser } from "react-icons/fa";
 import Circles from "../constant/circles";
 import { Link } from "react-router-dom";
+import { useCart } from "../context/CartContext";
 const BookListPage = () => {
+
+  const [state] = useCart();
+  console.log(state)
+
   return (
     <div className=" relative flex items-center justify-center bg-[#ebeaea]">
       <div className="relative overflow-hidden  w-full h-full bg-[#ffffff] p-4">
@@ -19,6 +24,7 @@ const BookListPage = () => {
             </button>
             <div className="ml-2 flex items-center justify-center rounded-full bg-[#89C9D4] w-10 h-10">
               <FaShoppingCart />
+              {!!state.itemsCounter && <span className="flex justify-center text-sm w-5 h-5 bg-black text-white rounded-full absolute top-[-5px] left-[120px] " >{state.itemsCounter}</span>}
             </div>
           </div>
 

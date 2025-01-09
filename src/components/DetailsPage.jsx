@@ -26,7 +26,6 @@ const DetailsPage = () => {
           <div className="flex flex-row ">
             <button className="flex items-center bg-[#89C9D4] px-6 py-2 font-semibold rounded-3xl">
               <Link to={"/book-list"}>Back</Link>
-              
             </button>
             <div className="ml-2 flex items-center justify-center rounded-full bg-[#89C9D4] w-10 h-10">
               <FaShoppingCart />

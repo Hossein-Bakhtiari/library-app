@@ -6,7 +6,7 @@ const Login = () => {
 
   return (
     <div className=" relative flex items-center justify-center">
-      <div className="relative overflow-hidden  w-full h-full p-6 sm:p-8 bg-[#ffffff] rounded-lg shadow-lg">
+      <div className="relative overflow-hidden  w-full h-screen p-6 sm:p-8 bg-[#ffffff] rounded-lg ">
         {/* <circles /> */}
         <div className="sm:hidden absolute top-[-20px] left-[-90px] w-40 h-40 bg-[#52D8F942] rounded-full opacity-90"></div>
         <div className="sm:hidden absolute top-[-80px] left-[-10px] w-40 h-40 bg-[#52D8F942] rounded-full opacity-90"></div>
