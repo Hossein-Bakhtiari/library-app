@@ -5,6 +5,7 @@ import BookListPage from "./components/BookListPage";
 import DetailsPage from "./components/DetailsPage";
 import BookProvider from "./context/BookContext";
 import CartProvider from "./context/CartContext";
+import CheckingOutPage from "./components/CheckingOutPage";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/book-list" element={<BookListPage />} />
           <Route path="/book/:id" element={<DetailsPage />} />
+          <Route path="/checkout" element={<CheckingOutPage />} />
         </Routes>
       </BookProvider>
     </CartProvider>

@@ -2,12 +2,14 @@ import React from "react";
 import { Link, useParams } from "react-router-dom";
 import { useBookDetails } from "../context/BookContext";
 import { FaPlusCircle, FaShoppingCart, FaUser } from "react-icons/fa";
-import Circles from "../constant/circles";
+import { useCart } from "../context/CartContext";
 
 const DetailsPage = () => {
   const { id } = useParams();
   const bookDetails = useBookDetails(+id);
   console.log(bookDetails);
+  
+  const [state] = useCart();
   return (
     <div className=" relative flex items-center justify-center bg-[#ebeaea]">
       <div className="relative overflow-hidden  w-full h-full bg-[#ffffff] p-4">
@@ -28,7 +30,11 @@ const DetailsPage = () => {
               <Link to={"/book-list"}>Back</Link>
             </button>
             <div className="ml-2 flex items-center justify-center rounded-full bg-[#89C9D4] w-10 h-10">
+              <Link to={"/checkout"}>
               <FaShoppingCart />
+              </Link>
+              {!!state.itemsCounter && <span className="flex justify-center text-sm w-5 h-5 bg-black text-white rounded-full absolute top-[-5px] left-[120px] " >{state.itemsCounter}</span>}
+
             </div>
           </div>
 
@@ -43,7 +49,7 @@ const DetailsPage = () => {
         </div>
 
         {/* Search Box */}
-        <div class="relative mx-3 my-5">
+        {/* <div class="relative mx-3 my-5">
           <input
             type="text"
             placeholder="Search Books"
@@ -68,7 +74,7 @@ const DetailsPage = () => {
               />
             </svg>
           </button>
-        </div>
+        </div> */}
 
         <div className="relative bg-white p-6 rounded-lg shadow-md max-w-3xl mx-auto my-8">
           <div className="flex flex-col md:flex-row gap-6">
