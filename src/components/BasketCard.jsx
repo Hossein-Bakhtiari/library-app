@@ -32,10 +32,22 @@ const BasketCard = ({ data, clickHandler }) => {
           <p className="text-sm font-semibold text-gray-700">
             {data.description}
           </p>
-          <div className="flex flex-row  justify-end w-50 ">
+          <div className="flex  justify-between items-center w-full pt-3 ">
+            <div>
+              <p className="flex justify-center items-center">
+                <p className="font-bold mr-2 text-sm">Quantiy:</p>
+                <span>{data.quantity}</span>
+              </p>
+              <div className="flex justify-center">
+                {" "}
+                <p className="flex text-sm font-bold text-gray-800">
+                  Total: ${data.price * data.quantity} <p className="text-gray-500"></p>
+                </p>
+              </div>
+            </div>
             <button
               onClick={() => clickHandler("REMOVE-ITEM", data)}
-              className="w-10 h-10 rounded-full flex justify-end items-end "
+              className="w-10 h-10 rounded-full flex justify-center items-center "
             >
               <FaRegTrashAlt className="w-5 h-5 " />
             </button>
@@ -43,12 +55,6 @@ const BasketCard = ({ data, clickHandler }) => {
         </div>
       </div>
       {/* Price */}
-      <div className="flex justify-center">
-        {" "}
-        <p className="flex text-sm font-bold text-gray-800 mt-2">
-          ${data.price} <p className="text-gray-500">(USD)</p>
-        </p>
-      </div>
     </div>
   );
 };
