@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 const BasketCard = ({ data, clickHandler }) => {
   return (
-    <div className="relative flex-col  bg-white shadow-2xl rounded-xl  overflow-hidden p-3 mb-4">
+    <div className="relative flex-col    rounded-xl  overflow-hidden p-3 mb-4">
       <div className=" flex">
         <div className=" flex flex-col w-3/5 ">
           <div className="flex items-center justify-center bg-[#e2e2e2] ">

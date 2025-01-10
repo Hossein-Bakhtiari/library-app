@@ -9,7 +9,6 @@ import { useBookDetails } from "../context/BookContext";
 import BasketCard from "./BasketCard";
 import TotalPurches from "./TotalPurches";
 
-
 const CheckingOutPage = () => {
   const [state, dispatch] = useCart();
 
@@ -18,16 +17,15 @@ const CheckingOutPage = () => {
   };
   console.log(state);
   return (
-    
     <div className=" relative flex h-fit  items-center justify-center bg-[#ebeaea]">
       <div className="relative overflow-x-clip  h-full w-full  bg-[#ffffff] p-4">
         {/* <circles /> */}
         <div className="sm:hidden absolute top-[-20px] left-[-90px] w-40 h-40 bg-[#52D8F942] rounded-full opacity-90"></div>
-                <div className="sm:hidden absolute top-[-80px] left-[-10px] w-40 h-40 bg-[#52D8F942] rounded-full opacity-90"></div>
-                <div className="sm:hidden absolute top-[240px] left-[-80px] w-80 h-80 bg-[#52D8F942] rounded-full opacity-90"></div>
-                <div className="sm:hidden absolute top-[100px] right-[-90px] w-80 h-80 bg-[#52D8F942] rounded-full opacity-90"></div>
-                <div className="sm:hidden absolute top-[900px] left-[-80px] w-80 h-80 bg-[#52D8F942] rounded-full opacity-90"></div>
-                <div className="sm:hidden absolute top-[700px] right-[-90px] w-80 h-80 bg-[#52D8F942] rounded-full opacity-90"></div>
+        <div className="sm:hidden absolute top-[-80px] left-[-10px] w-40 h-40 bg-[#52D8F942] rounded-full opacity-90"></div>
+        <div className="sm:hidden absolute top-[240px] left-[-80px] w-80 h-80 bg-[#52D8F942] rounded-full opacity-90"></div>
+        <div className="sm:hidden absolute top-[100px] right-[-90px] w-80 h-80 bg-[#52D8F942] rounded-full opacity-90"></div>
+        <div className="sm:hidden absolute top-[900px] left-[-80px] w-80 h-80 bg-[#52D8F942] rounded-full opacity-90"></div>
+        <div className="sm:hidden absolute top-[700px] right-[-90px] w-80 h-80 bg-[#52D8F942] rounded-full opacity-90"></div>
 
         {/* buttons*/}
         <div className="relative flex justify-between items-center mb-4 mx-2">
@@ -57,11 +55,10 @@ const CheckingOutPage = () => {
           </div>
         </div>
 
-        {/* Search Box */}
         <div class="relative mx-3 my-5">
-            <TotalPurches state={state} clickHandler={clickHandler} />
+          <TotalPurches state={state} clickHandler={clickHandler} />
         </div>
-        <div>
+        <div className="relative flex-col  bg-white shadow-2xl rounded-xl  overflow-hidden p-3 mb-4">
           {state.selectedItems.map((product) => (
             <BasketCard
               key={product.id}
@@ -69,10 +66,17 @@ const CheckingOutPage = () => {
               clickHandler={clickHandler}
             />
           ))}
+          {!!state.itemsCounter && (
+            <button
+              type="submit"
+              className="w-full my-2 py-3 font-semibold bg-[#2BB9D2] text-white rounded-3xl shadow-xl hover:bg-black focus:outline-none focus:ring-2 focus:ring-black text-sm sm:text-base"
+            >
+              <Link to={"/book-List"}>Payment Method</Link>
+            </button>
+          )}
         </div>
       </div>
     </div>
-    
   );
 };
 
