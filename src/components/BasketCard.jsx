@@ -54,7 +54,7 @@ const BasketCard = ({ data, clickHandler }) => {
           </div>
         </div>
       </div>
-      {/* Price */}
+    
     </div>
   );
 };

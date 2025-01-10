@@ -41,11 +41,12 @@ const SignUp = () => {
            </div>
    
            {/* Welcome Here*/}
-           <h2 className="text-center mt-9 text-xl font- font-bold sm:text-xl mb-4">
+           <h2 className="text-center mt-9 text-xl font-bold sm:text-xl mb-4">
            Welcome Here, Wish You The Best 
            </h2>
            <div className=" relative flex justify-center m-8">
-                <p className='font-normal text-sm items-center'>Please Join In Our Community</p>
+                <p className='font-medium m-3
+                 text-sm items-center'>Please Join In Our Community</p>
            </div>
    
            {/* Form */}
@@ -90,13 +91,13 @@ const SignUp = () => {
            </form>
    
            {/* Sign Up */}
-           <div className="text-center mt-4">
-            <form className='relative'>
+           <div className= "justify-center items-center text-center mt-4">
+            <form className=' relative  '>
              <p className="text-xs font-medium sm:text-xs">
                 
                Already have an account?{" "}
-               <a href="/login" className="text-[#2BB9D2] hover:underline">
-                 Sign In
+               <a href="/login" className="font-bold text-[#2BB9D2] hover:underline">
+                 Log in
                </a>
              </p>
             </form>

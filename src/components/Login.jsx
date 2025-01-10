@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 const Login = () => {
   return (
     <div className=" relative flex items-center justify-center">
-      <div className="relative overflow-hidden   w-full h-full p-5 sm:p-8 bg-[#ffffff] rounded-lg ">
+      <div className="relative overflow-hidden  w-full h-screen p-6 sm:p-8 bg-[#ffffff] rounded-lg  ">
         {/* <circles /> */}
         <div className="sm:hidden absolute top-[-20px] left-[-90px] w-40 h-40 bg-[#52D8F942] rounded-full opacity-90"></div>
         <div className="sm:hidden absolute top-[-80px] left-[-10px] w-40 h-40 bg-[#52D8F942] rounded-full opacity-90"></div>
@@ -63,14 +63,14 @@ const Login = () => {
               className="w-full shadow-md px-4  py-3 border rounded-3xl placeholder:font-semibold focus:outline-none focus:ring-2 focus:ring-blue-400 text-sm sm:text-base"
             />
           </div>
-          <div className="mb-4">
+          <div className="mb-1">
             <input
               type="password"
               placeholder="Enter Password"
               className="w-full shadow-md px-4 py-3 border rounded-3xl placeholder:font-semibold focus:outline-none focus:ring-2 focus:ring-blue-400 text-sm sm:text-base"
             />
           </div>
-          <div className=" relative text-center mb-4">
+          <div className=" relative text-center mb-3">
             <a
               href="/signup"
               className="text-xs font-semibold sm:text-sm text-[#2BB9D2] hover:underline"
@@ -87,13 +87,13 @@ const Login = () => {
         </form>
 
         {/* Sign Up */}
-        <div className=" flex justify-center items-center text-center mt-4">
+        <div className=" flex justify-center items-center text-center my-2">
           <form className="relative">
             <p className="text-xs font-medium sm:text-xs">
-              Already have an account?{" "}
+            No account yet?{" "}
               <a
                 href="/signup"
-                className="text-xs font-semibold ml-2 sm:text-sm text-[#2BB9D2] hover:underline"
+                className="text-xs font-semibold  sm:text-sm text-[#2BB9D2] hover:underline"
               >
                 SignUp
               </a>
