@@ -59,6 +59,11 @@ const CheckingOutPage = () => {
           <TotalPurches state={state} clickHandler={clickHandler} />
         </div>
         <div className="relative flex-col  bg-white shadow-2xl rounded-xl  overflow-hidden p-3 mb-4">
+          {/* {!!state.itemsCounter && (
+            <h2 className="text-center  text-xl font-bold mb- ">
+              Your Purchases
+            </h2>
+          )} */}
           {state.selectedItems.map((product) => (
             <BasketCard
               key={product.id}

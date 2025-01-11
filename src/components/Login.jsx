@@ -80,7 +80,7 @@ const Login = () => {
           </div>
           <button
             type="submit"
-            className="w-full py-3 font-semibold bg-[#2BB9D2] text-white rounded-3xl shadow-xl hover:bg-black focus:outline-none focus:ring-2 focus:ring-black text-sm sm:text-base"
+            className="w-full py-3 font-semibold bg-[#2BB9D2] text-white rounded-3xl shadow-xl hover:bg-black focus:outline-none focus:ring-2 focus:ring-black text-sm sm:text-base hover:bg-[#9bdeffbf] hover:text-[#2BB9D2] transition-all duration-100"
           >
             <Link to={"/book-List"}>Login</Link>
           </button>
