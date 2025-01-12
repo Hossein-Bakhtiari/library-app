@@ -4,12 +4,17 @@ import { useBookDetails } from "../context/BookContext";
 import { FaPlusCircle, FaShoppingCart, FaUser } from "react-icons/fa";
 import { useCart } from "../context/CartContext";
 
+
 const DetailsPage = () => {
   const { id } = useParams();
   const bookDetails = useBookDetails(+id);
   console.log(bookDetails);
-  
-  const [state] = useCart();
+
+  const [state, dispatch] = useCart();
+  const clickHandler = (type) => {
+    dispatch({ type, payload: bookDetails });
+  };
+
   return (
     <div className=" relative flex items-center justify-center bg-[#ebeaea]">
       <div className="relative overflow-hidden  w-full h-full bg-[#ffffff] p-4">
@@ -31,10 +36,13 @@ const DetailsPage = () => {
             </button>
             <div className="ml-2 flex items-center justify-center rounded-full bg-[#89C9D4] w-10 h-10">
               <Link to={"/checkout"}>
-              <FaShoppingCart />
+                <FaShoppingCart />
               </Link>
-              {!!state.itemsCounter && <span className="flex justify-center text-sm w-5 h-5 bg-black text-white rounded-full absolute top-[-5px] left-[120px] " >{state.itemsCounter}</span>}
-
+              {!!state.itemsCounter && (
+                <span className="flex justify-center text-sm w-5 h-5 bg-black text-white rounded-full absolute top-[-5px] left-[120px] ">
+                  {state.itemsCounter}
+                </span>
+              )}
             </div>
           </div>
 
@@ -164,7 +172,10 @@ const DetailsPage = () => {
                 />
               </div>
             </div>
-            <button className="w-full bg-red-500 text-white py-3 rounded-md font-bold shadow-md hover:bg-red-600">
+            <button
+              onClick={() => clickHandler("ADD_ITEM")}
+              className="w-full bg-red-500 text-white py-3 rounded-md font-bold shadow-md hover:bg-red-600"
+            >
               Add to Cart
             </button>
           </div>
